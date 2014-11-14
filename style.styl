@@ -1,20 +1,16 @@
+@import 'mixins'
+
 .parent
-  display flex
+  background-color myWhite
 
 .item
   width 150px
   height 150px
   background-color red
   border 1px solid black
-  flex 1
 
 .row
-  display flex
+  flex()
   flex-direction row
   justify-content space-around
   padding 5px
-  .column
-    display flex
-    flex-direction column
-    justify-content space-around
-
