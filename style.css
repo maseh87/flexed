@@ -1,0 +1,21 @@
+.parent {
+  display: flex;
+}
+.item {
+  width: 150px;
+  height: 150px;
+  background-color: #f00;
+  border: 1px solid #000;
+  flex: 1;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+}
+.row .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
