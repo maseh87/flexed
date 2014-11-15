@@ -1,11 +1,15 @@
-.parent {
-  background-color: myWhite;
-}
 .item {
   width: 150px;
   height: 150px;
   background-color: #f00;
   border: 1px solid #000;
+}
+.last {
+  -webkit-box-ordinal-group: 6;
+  -moz-box-ordinal-group: 6;
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6;
 }
 .row {
   display: -webkit-box;
