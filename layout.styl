@@ -105,6 +105,27 @@
   display inherit
 
 
+layout-presets(str)
+  [{flex}]
+    flex 1
+
+  // (1-19) * 5 = 5-95%
+  for i in 1..19
+    num = i * 5
+    [{str}={num}]
+      layout-preset(i * 5 + '%')
+
+  [{str}="33"], [{str}="34"]
+    layout-preset(33.33%)
+
+  [{str}="66"], [{str}="67"]
+    layout-preset(66.66%)
+
+
+layout-preset(value)
+  flex 0 0 value
+  max-width value
+
 
 // @mixin layout-offset-presets($attr) {
 //   // (1-19) * 5 = 5-95%
@@ -168,7 +189,7 @@
 
 // layout = Default
 // ------------------------------
-// layout-presets(flex)
+layout-presets(flex)
 // @include layout-offset-presets( offset );
 // @include layout-order-presets( layout-order );
 
