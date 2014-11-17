@@ -6,14 +6,26 @@
 </head>
 <body>
   <div layout="horizontal" layout-padding>
-    <div class="item">Item 1</div>
-    <div class="item" flex>Item 2</div>
-    <div class="item">Item 3</div>
+    <div flex>
+      <div class="item">Item 1</div>
+    </div>
+    <div flex>
+      <div class="item">Item 2</div>
+    </div>
+    <div flex>
+      <div class="item">Item 3</div>
+    </div>
   </div>
-  <div layout="vertical">
-    <div class="item" flex>Item 1</div>
-    <div class="item" flex>Item 2</div>
-    <div class="item" flex>Item 3</div>
+
+
+  <div layout layout-padding>
+    <div flex="50" offset="25">
+      <div class="item">
+        Item 4
+      </div>
+    </div>
   </div>
+
+
 </body>
 </html>

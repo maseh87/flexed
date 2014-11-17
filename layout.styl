@@ -130,9 +130,9 @@ layout-preset(value)
 layout-offset-presets(str)
   // (1-19) * 5 = 5-95%
   for i in 1..19
-    num = '"' + i * 5 + '"'
+    num = '"' + i * 5 + '%' + '"'
     [{str}={num}]
-      margin-left: num + '%'
+      margin-left: num
 
   [{attr}="33"], [{attr}="34"]
     margin-left 33.33%
