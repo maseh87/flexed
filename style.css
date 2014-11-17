@@ -164,6 +164,113 @@
   flex: 0 0 66.66%;
   max-width: 66.66%;
 }
+[offset="5"] {
+  margin-left: '"5"%';
+}
+[offset="10"] {
+  margin-left: '"10"%';
+}
+[offset="15"] {
+  margin-left: '"15"%';
+}
+[offset="20"] {
+  margin-left: '"20"%';
+}
+[offset="25"] {
+  margin-left: '"25"%';
+}
+[offset="30"] {
+  margin-left: '"30"%';
+}
+[offset="35"] {
+  margin-left: '"35"%';
+}
+[offset="40"] {
+  margin-left: '"40"%';
+}
+[offset="45"] {
+  margin-left: '"45"%';
+}
+[offset="50"] {
+  margin-left: '"50"%';
+}
+[offset="55"] {
+  margin-left: '"55"%';
+}
+[offset="60"] {
+  margin-left: '"60"%';
+}
+[offset="65"] {
+  margin-left: '"65"%';
+}
+[offset="70"] {
+  margin-left: '"70"%';
+}
+[offset="75"] {
+  margin-left: '"75"%';
+}
+[offset="80"] {
+  margin-left: '"80"%';
+}
+[offset="85"] {
+  margin-left: '"85"%';
+}
+[offset="90"] {
+  margin-left: '"90"%';
+}
+[offset="95"] {
+  margin-left: '"95"%';
+}
+[attr="33"],
+[attr="34"] {
+  margin-left: 33.33%;
+}
+[attr="66"],
+[attr="67"] {
+  margin-left: 66.66%;
+}
+[layout-order="1"] {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+[layout-order="2"] {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+}
+[layout-order="3"] {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+[layout-order="4"] {
+  -webkit-box-ordinal-group: 4;
+  -moz-box-ordinal-group: 4;
+  -ms-flex-order: 4;
+  -webkit-order: 4;
+  order: 4;
+}
+[layout-order="5"] {
+  -webkit-box-ordinal-group: 5;
+  -moz-box-ordinal-group: 5;
+  -ms-flex-order: 5;
+  -webkit-order: 5;
+  order: 5;
+}
+[layout-order="6"] {
+  -webkit-box-ordinal-group: 6;
+  -moz-box-ordinal-group: 6;
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6;
+}
 .item {
   width: 150px;
   height: 150px;

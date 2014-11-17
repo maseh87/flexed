@@ -127,32 +127,28 @@ layout-preset(value)
   max-width value
 
 
-// @mixin layout-offset-presets($attr) {
-//   // (1-19) * 5 = 5-95%
-//   @for $i from 1 through 19 {
-//     [#{$attr}="#{$i * 5}"] {
-//       margin-left: #{$i * 5 + '%'};
-//     }
-//   }
-//   [#{$attr}="33"], [#{$attr}="34"] {
-//     margin-left: 33.33%;
-//   }
-//   [#{$attr}="66"], [#{$attr}="67"] {
-//     margin-left: 66.66%;
-//   }
-// }
+layout-offset-presets(str)
+  // (1-19) * 5 = 5-95%
+  for i in 1..19
+    num = '"' + i * 5 + '"'
+    [{str}={num}]
+      margin-left: num + '%'
 
-// @mixin layout-order-preset($attr, $n) {
-//   [#{$attr}="#{$n}"] {
-//     order: $n;
-//   }
-// }
+  [{attr}="33"], [{attr}="34"]
+    margin-left 33.33%
+  [{attr}="66"], [{attr}="67"]
+    margin-left 66.66%
 
-// @mixin layout-order-presets($attr) {
-//   @for $i from 1 through 6 {
-//     @include layout-order-preset($attr, $i);
-//   }
-// }
+
+
+layout-order-preset(attr, n)
+  num = '"' + n + '"'
+  [{attr}={num}]
+    order n
+
+layout-order-presets(attr)
+  for i in 1..6
+    layout-order-preset(attr, i)
 
 // @mixin layout-breakpoint($suffix, $min-width) {
 //   @media (min-width: $min-width) {
@@ -190,8 +186,8 @@ layout-preset(value)
 // layout = Default
 // ------------------------------
 layout-presets(flex)
-// @include layout-offset-presets( offset );
-// @include layout-order-presets( layout-order );
+layout-offset-presets(offset)
+layout-order-presets(layout-order)
 
 
 // // layout-sm = Small (Tablets)
