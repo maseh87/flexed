@@ -5,17 +5,36 @@ flexbox()
   display -webkit-flex
   display flex
 
-flex(values...)
-  -webkit-box-flex: values;
-  -moz-box-flex: values;
-  -webkit-flex: values;
-  -ms-flex: values;
-  flex: values;
+append(values...)
+  -webkit-box-flex values
+  -moz-box-flex values
+  -webkit-flex values
+  -ms-flex values
+  flex values
 
 order(num)
-  -webkit-box-ordinal-group: num;
-  -moz-box-ordinal-group: num;
-  -ms-flex-order: num;
-  -webkit-order: num;
-  order: num;
+  -webkit-box-ordinal-group num
+  -moz-box-ordinal-group num
+  -ms-flex-order num
+  -webkit-order num
+  order num
 
+layout-presets(str)
+  [flex]
+    flex 1
+
+  // (1-19) * 5 = 5-95%
+  // for i in 1..19
+  //   [args(i * 5)]
+  //     layout-preset(i * 5 + '%')
+
+  // [args = "33"], [args = "34"]
+  //   layout-preset(33.33%)
+
+  // [args = "66"], [args = "67"]
+  //   layout-preset(66.66%)
+
+
+layout-preset(value)
+  flex 0 0 value
+  max-width value
