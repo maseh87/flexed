@@ -20,19 +20,19 @@ order(num)
   order num
 
 layout-presets(str)
-  [flex]
+  [{flex}]
     flex 1
 
   // (1-19) * 5 = 5-95%
-  // for i in 1..19
-  //   [args(i * 5)]
-  //     layout-preset(i * 5 + '%')
+  for i in 1..19
+    [{str}=i * 5]
+      layout-preset(i * 5 + '%')
 
-  // [args = "33"], [args = "34"]
-  //   layout-preset(33.33%)
+  [{str}="33"], [{str}="34"]
+    layout-preset(33.33%)
 
-  // [args = "66"], [args = "67"]
-  //   layout-preset(66.66%)
+  [{str}="66"], [{str}="67"]
+    layout-preset(66.66%)
 
 
 layout-preset(value)
