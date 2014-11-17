@@ -11,13 +11,20 @@
   -webkit-order: 6;
   order: 6;
 }
+.layout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 .row {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  flex-flow: row wrap;
   padding: 5px;
 }
