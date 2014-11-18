@@ -4,28 +4,28 @@
   <title></title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-  <div layout="horizontal" layout-padding>
-    <div flex>
-      <div class="item">Item 1</div>
-    </div>
-    <div flex>
-      <div class="item">Item 2</div>
-    </div>
-    <div flex>
-      <div class="item">Item 3</div>
-    </div>
+<body layout="vertical" layout-fill class="layout-demo full-layout-demo">
+
+  <header>
+    Header
+  </header>
+
+  <div flex layout="vertical" layout-sm="horizontal">
+
+    <aside flex-sm="33" flex-md="20">
+      Menu<br>
+      [flex-sm="33"][flex-md="20"]
+    </aside>
+
+    <main flex>
+      Main [flex]
+    </main>
+
   </div>
 
-
-  <div layout layout-padding>
-    <div flex="50" offset="25">
-      <div class="item">
-        Item 4
-      </div>
-    </div>
-  </div>
-
+  <footer>
+    Footer
+  </footer>
 
 </body>
 </html>

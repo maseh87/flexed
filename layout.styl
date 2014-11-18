@@ -106,7 +106,7 @@
 
 
 layout-presets(str)
-  [{flex}]
+  [{str}]
     flex 1
 
   // (1-19) * 5 = 5-95%
@@ -130,9 +130,9 @@ layout-preset(value)
 layout-offset-presets(str)
   // (1-19) * 5 = 5-95%
   for i in 1..19
-    num = '"' + i * 5 + '%' + '"'
+    num = '"' + i * 5 + '"'
     [{str}={num}]
-      margin-left: num
+      margin-left i * 5 + '%'
 
   [{attr}="33"], [{attr}="34"]
     margin-left 33.33%
@@ -150,37 +150,32 @@ layout-order-presets(attr)
   for i in 1..6
     layout-order-preset(attr, i)
 
-// @mixin layout-breakpoint($suffix, $min-width) {
-//   @media (min-width: $min-width) {
+layout-breakpoint(suffix, min-width)
+  // @media min-width
+  // layout-presets(flex-{suffix})
+  // layout-offset-presets(offset-{suffix})
+  // layout-order-presets(layout-order-{suffix})
+  [layout-{suffix}]
+    flex-direction row
 
-//     @include layout-presets( flex-#{$suffix} );
-//     @include layout-offset-presets( offset-#{$suffix} );
-//     @include layout-order-presets( layout-order-#{$suffix} );
-//     [layout-#{$suffix}] {
-//       flex-direction: row;
-//     }
-//     [layout-#{$suffix}=vertical] {
-//       flex-direction: column;
-//     }
+  [layout-{suffix}=vertical]
+    flex-direction column
 
-//     [block-#{$suffix}] {
-//       display: block;
-//     }
 
-//     [inline-block-#{$suffix}] {
-//       display: inline-block;
-//     }
+  [block-{suffix}]
+    display block
 
-//     [show-#{$suffix}] {
-//       display: inherit;
-//     }
 
-//     [hide-#{$suffix}] {
-//       display: none;
-//     }
+  [inline-block-{suffix}]
+    display inline-block
 
-//   }
-// }
+
+  [show-{suffix}]
+    display inherit
+
+
+  [hide-{suffix}]
+    display none
 
 
 // layout = Default
@@ -192,14 +187,14 @@ layout-order-presets(layout-order)
 
 // // layout-sm = Small (Tablets)
 // // ------------------------------
-// @include layout-breakpoint(sm, $layout-breakpoint-sm);
+layout-breakpoint(sm, layout-breakpoint-sm)
 
 
 // // layout-md = Medium (Desktops)
 // // ------------------------------
-// @include layout-breakpoint(md, $layout-breakpoint-md);
+layout-breakpoint(md, layout-breakpoint-md)
 
 
 // // layout-lg = Large
 // // ------------------------------
-// @include layout-breakpoint(lg, $layout-breakpoint-lg);
+layout-breakpoint(lg, layout-breakpoint-lg)
